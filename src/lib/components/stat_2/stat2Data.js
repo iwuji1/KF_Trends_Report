@@ -22,14 +22,16 @@ export const segmentOptions = {
     'Life Sciences',
     'Non-Profit',
     'Professional Services',
-    'Technology'
+    'Technology',
+    'AVERAGE'
   ],
 
   Region: [
     'NA',
     'LATAM',
     'EMEA',
-    'APAC'
+    'APAC',
+    'AVERAGE'
   ]
 };
 
@@ -134,6 +136,9 @@ function createSegmentValues(
 export function formatSubsegmentLabel(
   subsegment
 ) {
+  if (subsegment === 'AVERAGE') {
+    return 'Global Average';
+  }
   return subsegment;
 }
 
