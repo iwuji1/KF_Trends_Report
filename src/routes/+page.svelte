@@ -1,8 +1,11 @@
 <script>
 
     import Stat1 from '$lib/components/stat_1/InteractiveDotPlotStat1.svelte'
+    import Stat1PT from '$lib/components/stat_1_pt/InteractiveDotPlotStat1.svelte'
     import Stat2 from '$lib/components/stat_2/InteractiveDotPlotStat2.svelte'
+    import Stat2PT from '$lib/components/stat_2_pt/InteractiveDotPlotStat2.svelte'
     import Stat3 from '$lib/components/stat_3/InteractiveDotPlotStat3.svelte'
+    import Stat3PT from '$lib/components/stat_3_pt/InteractiveDotPlotStat3.svelte'
 
 
     const charts = [
@@ -20,10 +23,30 @@
         }
     ];
 
+    const charts_pt = [
+        {
+          title: 'Stat 1 PT',
+          chart: Stat1PT
+        },
+        {
+          title: 'Stat 2 PT',
+          chart: Stat2PT
+        },
+        {
+          title: 'Stat 3 PT',
+          chart: Stat3PT
+        }
+    ];
+
     let activeChartIndex = $state(0);
+    let activeChartIndexPT = $state(0);
 
     const activeChart = $derived(
         charts[activeChartIndex]
+    );
+
+    const activeChartPT = $derived(
+        charts_pt[activeChartIndexPT]
     );
 
 </script>
@@ -54,6 +77,7 @@
                         }
                         onclick={() => {
                             activeChartIndex = index;
+                            activeChartIndexPT = index;
                         }}
                         >
                         {item.title}
@@ -67,6 +91,7 @@
         role="tabpanel"
     >
         <activeChart.chart />
+        <activeChartPT.chart />
     </section>
     
 
