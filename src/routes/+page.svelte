@@ -2,8 +2,8 @@
 
     import Stat1 from '$lib/components/stat_1/InteractiveDotPlotStat1.svelte'
     import Stat1PT from '$lib/components/stat_1_pt/InteractiveDotPlotStat1.svelte'
-    import Stat2 from '$lib/components/stat_2/InteractiveDotPlotStat2.svelte'
-    import Stat2PT from '$lib/components/stat_2_pt/InteractiveDotPlotStat2.svelte'
+    import Stat2 from '$lib/components/stat_2_copy/InteractiveDotPlotStat2.svelte'
+    import Stat2PT from '$lib/components/stat_2_pt_copy/InteractiveDotPlotStat2.svelte'
     import Stat3 from '$lib/components/stat_3/InteractiveDotPlotStat3.svelte'
     import Stat3PT from '$lib/components/stat_3_pt/InteractiveDotPlotStat3.svelte'
 

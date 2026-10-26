@@ -7,7 +7,7 @@
   } from 'svelte/transition';
 
   import DotPlotTooltip
-    from '../DotPlotTooltip.svelte'
+    from '../DotPlotTooltip.svelte';
 
   import DotPlotLegend
     from './DotPlotLegendStat1.svelte';

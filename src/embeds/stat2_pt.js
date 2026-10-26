@@ -1,7 +1,7 @@
 import { mount } from 'svelte';
 
 import Chart
-  from '$lib/components/stat_2_pt/DotPlotLegendStat2.svelte';
+  from '$lib/components/stat_2_pt/InteractiveDotPlotStat2.svelte';
 
 const selector =
   '[data-kf-trend="stat-2-pt"]';
