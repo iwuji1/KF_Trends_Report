@@ -2,10 +2,18 @@
 
     import Stat1 from '$lib/components/stat_1/InteractiveDotPlotStat1.svelte'
     import Stat1PT from '$lib/components/stat_1_pt/InteractiveDotPlotStat1.svelte'
-    import Stat2 from '$lib/components/stat_2_copy/InteractiveDotPlotStat2.svelte'
-    import Stat2PT from '$lib/components/stat_2_pt_copy/InteractiveDotPlotStat2.svelte'
+    import Stat1CN from '$lib/components/stat_1_cn/InteractiveDotPlotStat1.svelte'
+    import Stat1JP from '$lib/components/stat_1_jp/InteractiveDotPlotStat1.svelte'
+    
+    import Stat2 from '$lib/components/stat_2/InteractiveDotPlotStat2.svelte'
+    import Stat2PT from '$lib/components/stat_2_pt/InteractiveDotPlotStat2.svelte'
+    import Stat2CN from '$lib/components/stat_2_cn/InteractiveDotPlotStat2.svelte'
+    import Stat2JP from '$lib/components/stat_2_jp/InteractiveDotPlotStat2.svelte'
+
     import Stat3 from '$lib/components/stat_3/InteractiveDotPlotStat3.svelte'
     import Stat3PT from '$lib/components/stat_3_pt/InteractiveDotPlotStat3.svelte'
+    import Stat3CN from '$lib/components/stat_3_cn/InteractiveDotPlotStat3.svelte'
+    import Stat3JP from '$lib/components/stat_3_jp/InteractiveDotPlotStat3.svelte'
 
 
     const charts = [
@@ -38,8 +46,40 @@
         }
     ];
 
+    const charts_cn = [
+      {
+        title: 'Stat 1 CN',
+        chart: Stat1CN
+      },
+      {
+        title: 'Stat 2 CN',
+        chart: Stat2CN
+      },
+      {
+        title: 'Stat 3 CN',
+        chart: Stat3CN
+      }
+    ]
+
+    const charts_jp = [
+      {
+        title: 'Stat 1 JP',
+        chart: Stat1JP
+      },
+      {
+        title: 'Stat 2 JP',
+        chart: Stat2JP
+      },
+      {
+        title: 'Stat 3 JP',
+        chart: Stat3JP
+      }
+    ]
+
     let activeChartIndex = $state(0);
     let activeChartIndexPT = $state(0);
+    let activeChartIndexCN = $state(0);
+    let activeChartIndexJP = $state(0);
 
     const activeChart = $derived(
         charts[activeChartIndex]
@@ -47,6 +87,14 @@
 
     const activeChartPT = $derived(
         charts_pt[activeChartIndexPT]
+    );
+
+    const activeChartCN = $derived(
+        charts_cn[activeChartIndexCN]
+    );
+
+    const activeChartJP = $derived(
+        charts_jp[activeChartIndexJP]
     );
 
 </script>
@@ -78,6 +126,8 @@
                         onclick={() => {
                             activeChartIndex = index;
                             activeChartIndexPT = index;
+                            activeChartIndexCN = index;
+                            activeChartIndexJP = index;
                         }}
                         >
                         {item.title}
@@ -92,6 +142,8 @@
     >
         <activeChart.chart />
         <activeChartPT.chart />
+        <activeChartCN.chart />
+        <activeChartJP.chart />
     </section>
     
 

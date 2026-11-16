@@ -1,5 +1,5 @@
 import rawData
-  from '$lib/datasets/stat_2.tsv?raw';
+  from '$lib/datasets/stat_2_jp.tsv?raw';
 
 
 /* ---------------------------------
@@ -7,31 +7,31 @@ import rawData
    --------------------------------- */
 
 export const segments = [
-  'Industry',
-  'Region'
+  '業界',
+  '地域'
 ];
 
 
 export const segmentOptions = {
-  Industry: [
-    'Consumer Markets',
-    'Energy',
-    'Financial Services',
-    'Healthcare',
-    'Industrial',
-    'Life Sciences',
-    'Non-Profit',
-    'Professional Services',
-    'Technology',
-    'AVERAGE'
+  業界: [
+    '一般消費財',
+    'エネルギー',
+    '金融',
+    'ヘルスケア',
+    '産業',
+    'ライフサイエンス',
+    'NPO',
+    'プロフェッショナルサービス',
+    'テクノロジー',
+    '平均'
   ],
 
-  Region: [
+  地域: [
     'NA',
     'LATAM',
     'EMEA',
     'APAC',
-    'AVERAGE'
+    '平均'
   ]
 };
 
@@ -136,8 +136,8 @@ function createSegmentValues(
 export function formatSubsegmentLabel(
   subsegment
 ) {
-  if (subsegment === 'AVERAGE') {
-    return 'Global Average';
+  if (subsegment === '平均') {
+    return 'グローバル平均';
   }
   return subsegment;
 }
@@ -231,7 +231,7 @@ export function parseStat1Data(
     groupingRow.findIndex(
       (value) =>
         value ===
-        'Global Average'
+        'グローバル平均'
     );
 
 
@@ -239,7 +239,7 @@ export function parseStat1Data(
     globalAverageIndex === -1
   ) {
     throw new Error(
-      'Could not find the Global Average column in stat_1.tsv.'
+      'Could not find the Global Average column in stat_1.tsv check.'
     );
   }
 

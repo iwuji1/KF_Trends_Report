@@ -7,10 +7,10 @@
   } from 'svelte/transition';
 
   import DotPlotTooltip
-    from '../DotPlotTooltip.svelte'
+    from '../DotPlotTooltip.svelte';
 
   import DotPlotLegend
-    from './DotPlotLegendStat2.svelte';
+    from './DotPlotLegendStat3.svelte';
 
   import {
     SourceData,
@@ -18,7 +18,7 @@
     createGlobalAverageData,
     segments,
     segmentOptions
-  } from './stat2Data.js';
+  } from './stat3Data.js';
 
 
   let {

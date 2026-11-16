@@ -239,7 +239,7 @@ export function parseStat1Data(
     globalAverageIndex === -1
   ) {
     throw new Error(
-      'Could not find the Global Average column in stat_1.tsv.'
+      'Could not find the Global Average column in stat_1.tsv check.'
     );
   }
 

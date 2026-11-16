@@ -63,6 +63,46 @@ const charts = [
     name: 'stat3_pt',
     entry:
       'src/embeds/stat3_pt.js'
+  },
+
+    // -------------------------
+  // Chinese
+  // -------------------------
+
+  {
+    name: 'stat1_cn',
+    entry:
+      'src/embeds/stat1_cn.js'
+  },
+  {
+    name: 'stat2_cn',
+    entry:
+      'src/embeds/stat2_cn.js'
+  },
+  {
+    name: 'stat3_cn',
+    entry:
+      'src/embeds/stat3_cn.js'
+  },
+
+    // -------------------------
+  // Japanese
+  // -------------------------
+
+  {
+    name: 'stat1_jp',
+    entry:
+      'src/embeds/stat1_jp.js'
+  },
+  {
+    name: 'stat2_jp',
+    entry:
+      'src/embeds/stat2_jp.js'
+  },
+  {
+    name: 'stat3_jp',
+    entry:
+      'src/embeds/stat3_jp.js'
   }
 
 ];
