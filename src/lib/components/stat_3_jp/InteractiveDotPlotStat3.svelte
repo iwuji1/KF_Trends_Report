@@ -1147,7 +1147,7 @@
 
       <div class="segment-control">
         <p class="control-label">
-          Select view
+          ビューを選択する
         </p>
 
         <div
@@ -1167,7 +1167,7 @@
               selectAverageView
             }
           >
-            Global Average
+            グローバル平均
           </button>
 
           {#each
@@ -1207,7 +1207,7 @@
           <div class="cohort-control">
             <div class="cohort-control-heading">
               <p class="control-label">
-                Select up to two cohorts
+                属性を2つまで選択可
               </p>
             </div>
 
@@ -1325,7 +1325,7 @@
           x={margin.left}
           y="14"
         >
-          Percentage agreeing
+          同意した回答者の割合（％）
         </text>
 
         <line
